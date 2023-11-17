@@ -19,6 +19,17 @@ The purpose of this repository is to demonstrate below:
 - Integrating chat systems with Stream Chat SDK for real-time event handling.
 - Integrating video call systems with Stream Video SDK using WebRTC under the hood.
 
+## 📷 Previews
+
+<p align="center">
+<img src="previews/preview0.png" alt="drawing" width="272" />
+<img src="previews/preview1.png" alt="drawing" width="272" />
+<img src="previews/preview2.png" alt="drawing" width="272" /></br>
+<img src="previews/preview5.png" alt="drawing" width="272" />
+<img src="previews/preview4.png" alt="drawing" width="272" />
+<img src="previews/preview3.png" alt="drawing" width="272" />
+</p>
+
 ## :bulb: Additional Repositories
 
 If you're interested in additional repositories that were built with Jetpack Compose and Stream SDK, check out the repositories below:
@@ -85,17 +96,6 @@ STREAM_API_KEY=REPLACE WITH YOUR API KEY
 8. Build and run the project.
 
 </details>
-
-## 📷 Previews
-
-<p align="center">
-<img src="previews/preview0.png" alt="drawing" width="272" />
-<img src="previews/preview1.png" alt="drawing" width="272" />
-<img src="previews/preview2.png" alt="drawing" width="272" /></br>
-<img src="previews/preview5.png" alt="drawing" width="272" />
-<img src="previews/preview4.png" alt="drawing" width="272" />
-<img src="previews/preview3.png" alt="drawing" width="272" />
-</p>
 
 ## 🛠 Tech Stack & Open Source Libraries
 - Minimum SDK level 23.
