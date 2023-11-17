@@ -26,10 +26,11 @@ class BaselineProfileGenerator {
   @get:Rule
   val baselineProfileRule = BaselineProfileRule()
 
-  @Testq
+  @Test
   fun startup() =
     baselineProfileRule.collect(
       packageName = "io.getstream.chat.android.twitchclone",
+      includeInStartupProfile = true,
       stableIterations = 2,
       maxIterations = 8,
     ) {

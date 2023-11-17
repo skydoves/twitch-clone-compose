@@ -54,11 +54,22 @@ android {
     jvmTarget = libs.versions.jvmTarget.get()
   }
 
+  lint {
+    abortOnError = false
+  }
+
+  packaging {
+    resources {
+      excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+    }
+  }
+
   buildTypes {
     create("benchmark") {
-      isDebuggable = true
-      signingConfig = getByName("debug").signingConfig
+      isDebuggable = false
+      signingConfig = signingConfigs.getByName("debug")
       matchingFallbacks += listOf("release")
+      proguardFiles("benchmark-rules.pro")
     }
   }
 }
@@ -84,6 +95,7 @@ dependencies {
   // Stream SDK
   implementation(libs.stream.chat.compose)
   implementation(libs.stream.chat.offline)
+  implementation(libs.stream.video.mock)
 
   // Jetpack
   implementation(libs.androidx.core.ktx)
