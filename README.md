@@ -64,7 +64,7 @@ If you’re interested in adding powerful In-App Messaging to your app, check ou
 - [Audio Room Tutorial](https://getstream.io/video/docs/android/tutorials/audio-room?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Dec2023_Jaewoong_TwitchCompose&utm_term=DevRelOss)
 - [Livestream Tutorial](https://getstream.io/video/docs/android/tutorials/livestream?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Dec2023_Jaewoong_TwitchCompose&utm_term=DevRelOss)
 
-## 💻 Build Your Own Chat Project
+## 💻 Build Your Own Twitch Project
 
 <details>
  <summary> If you want to build your own chat project, you should follow the instructions below:</summary>
