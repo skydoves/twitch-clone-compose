@@ -27,7 +27,7 @@ val User.nameColor: String
     "Steven" in name -> "#76d927"
     "Marin" in name -> "#175ad0"
     "Juan" in name -> "#18c090"
-    "Jaewoong" in name -> "#fffbd0"
+    "Jaewoong" in name -> "#005FFF"
     else -> "#808080"
   }
 

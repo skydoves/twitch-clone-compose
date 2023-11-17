@@ -22,8 +22,8 @@ plugins {
   id("getstream.android.hilt")
   id("getstream.spotless")
   id("kotlin-parcelize")
-
   id(libs.plugins.google.secrets.get().pluginId)
+  id(libs.plugins.baseline.profile.get().pluginId)
 }
 
 android {
@@ -53,6 +53,25 @@ android {
   kotlinOptions {
     jvmTarget = libs.versions.jvmTarget.get()
   }
+
+  lint {
+    abortOnError = false
+  }
+
+  packaging {
+    resources {
+      excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+    }
+  }
+
+  buildTypes {
+    create("benchmark") {
+      isDebuggable = false
+      signingConfig = signingConfigs.getByName("debug")
+      matchingFallbacks += listOf("release")
+      proguardFiles("benchmark-rules.pro")
+    }
+  }
 }
 
 secrets {
@@ -76,6 +95,7 @@ dependencies {
   // Stream SDK
   implementation(libs.stream.chat.compose)
   implementation(libs.stream.chat.offline)
+  implementation(libs.stream.video.mock)
 
   // Jetpack
   implementation(libs.androidx.core.ktx)
@@ -101,4 +121,6 @@ dependencies {
   implementation(libs.landscapist.placeholder)
 
   implementation(libs.stream.log)
+
+  baselineProfile(project(":baselineprofile"))
 }
