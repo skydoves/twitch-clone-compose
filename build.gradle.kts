@@ -14,5 +14,6 @@ plugins {
   alias(libs.plugins.ksp) apply false
   alias(libs.plugins.hilt) apply false
   alias(libs.plugins.google.secrets) apply false
+  alias(libs.plugins.baseline.profile) apply false
   alias(libs.plugins.spotless) apply false
 }

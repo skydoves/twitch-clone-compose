@@ -1,5 +1,4 @@
 @file:Suppress("UnstableApiUsage")
-
 pluginManagement {
   includeBuild("build-logic")
   repositories {
@@ -28,3 +27,4 @@ include(":core-data")
 include(":feature-channels")
 include(":feature-messages")
 include(":feature-livestream")
+include(":baselineprofile")

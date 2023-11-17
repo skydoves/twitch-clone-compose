@@ -22,8 +22,8 @@ plugins {
   id("getstream.android.hilt")
   id("getstream.spotless")
   id("kotlin-parcelize")
-
   id(libs.plugins.google.secrets.get().pluginId)
+  id(libs.plugins.baseline.profile.get().pluginId)
 }
 
 android {
@@ -52,6 +52,14 @@ android {
 
   kotlinOptions {
     jvmTarget = libs.versions.jvmTarget.get()
+  }
+
+  buildTypes {
+    create("benchmark") {
+      isDebuggable = true
+      signingConfig = getByName("debug").signingConfig
+      matchingFallbacks += listOf("release")
+    }
   }
 }
 
@@ -101,4 +109,6 @@ dependencies {
   implementation(libs.landscapist.placeholder)
 
   implementation(libs.stream.log)
+
+  baselineProfile(project(":baselineprofile"))
 }
