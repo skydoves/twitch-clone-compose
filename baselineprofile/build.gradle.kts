@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-  namespace = "com.skydoves.orbital.benchmark"
+  namespace = "io.getstream.chat.android.twitchclone.baselineprofile"
   compileSdk = Configuration.compileSdk
 
   compileOptions {
@@ -23,7 +23,15 @@ android {
   defaultConfig {
     minSdk = 24
     targetSdk = Configuration.targetSdk
-    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    testInstrumentationRunner = "androidx.test.runner.AndroidJUniqwtRunner"
+  }
+
+  buildTypes {
+    create("benchmark") {
+      isDebuggable = false
+      signingConfig = signingConfigs.getByName("debug")
+      matchingFallbacks += listOf("release")
+    }
   }
 
   targetProjectPath = ":app"
