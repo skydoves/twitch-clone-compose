@@ -28,7 +28,6 @@ If you're interested in additional repositories that were built with Jetpack Com
 - [Slack Clone Android](https://github.com/GetStream/stream-slack-clone-android): 📱 A chat demo app built with Jetpack Compose and Stream Chat SDK following clean architecture principles.
 - [Stream Draw Android](https://github.com/getStream/stream-draw-android): 🛥 Stream Draw is a real-time multiplayer drawing & chat game app built entirely with Jetpack Compose.
 - [Meeting Room Compose](https://github.com/GetStream/meeting-room-compose): 🎙️ A real-time meeting room app built with Jetpack Compose to demonstrate video communications.
-- [Facebook Messenger Clone](https://github.com/MathRoda/Messenger-clone): Facebook Messenger clone using Stream SDK & Jetpack Compose.
 
 ## 📲 Download APK
 Go to the [Releases](https://github.com/skydoves/twitch-clone-compose/releases) to download the latest APK.
