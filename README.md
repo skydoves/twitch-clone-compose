@@ -1,6 +1,5 @@
-<p>
-  <h1 align="center">Twitch Clone Compose</h1>
-</p>
+
+![Twitch-Clone-Project-1200x640px](https://github.com/skydoves/twitch-clone-compose/assets/24237865/82134974-05af-4753-a7d9-c3c0ff6a4bec)
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
@@ -19,17 +18,6 @@ The purpose of this repository is to demonstrate below:
 - Integrating chat systems with Stream Chat SDK for real-time event handling.
 - Integrating video call systems with Stream Video SDK using WebRTC under the hood.
 
-## 📷 Previews
-
-<p align="center">
-<img src="previews/preview0.png" alt="drawing" width="272" />
-<img src="previews/preview1.png" alt="drawing" width="272" />
-<img src="previews/preview2.png" alt="drawing" width="272" /></br>
-<img src="previews/preview5.png" alt="drawing" width="272" />
-<img src="previews/preview4.png" alt="drawing" width="272" />
-<img src="previews/preview3.png" alt="drawing" width="272" />
-</p>
-
 ## :bulb: Additional Repositories
 
 If you're interested in additional repositories that were built with Jetpack Compose and Stream SDK, check out the repositories below:
@@ -42,6 +30,17 @@ If you're interested in additional repositories that were built with Jetpack Com
 
 ## 📲 Download APK
 Go to the [Releases](https://github.com/skydoves/twitch-clone-compose/releases) to download the latest APK.
+
+## 📷 Previews
+
+<p align="center">
+<img src="previews/preview0.png" alt="drawing" width="272" />
+<img src="previews/preview1.png" alt="drawing" width="272" />
+<img src="previews/preview2.png" alt="drawing" width="272" /></br>
+<img src="previews/preview5.png" alt="drawing" width="272" />
+<img src="previews/preview4.png" alt="drawing" width="272" />
+<img src="previews/preview3.png" alt="drawing" width="272" />
+</p>
 
 <a href="https://getstream.io/chat/sdk/compose?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Dec2023_Jaewoong_TwitchCompose&utm_term=DevRelOss">
 <img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/>
