@@ -49,11 +49,12 @@ fun LivestreamWatcher(
   val uiState by livestreamViewModel.livestreamUiState.collectAsState()
 
   val scope = rememberCoroutineScope()
-  DisposableEffect(Unit) {
+  EnsureVideoCallPermissions {
     scope.launch {
       livestreamViewModel.joinCall(type = "livestream", id = "streamer")
     }
-
+  }
+  DisposableEffect(Unit) {
     onDispose {
       val call = (uiState as? LivestreamUiState.Success)?.call
       call?.leave()
