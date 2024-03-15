@@ -4,10 +4,11 @@ kotlinxCoroutines = "1.7.3"
 kotlinxSerializationJson = "1.6.2"
 ksp = "1.9.22-1.0.17"
 streamChatSDK = "6.0.13"
-streamVideoSDK = "0.4.2"
+streamVideoSDK = "0.5.1"
 streamLog = "1.1.4"
 jvmTarget = "17"
-landscapist = "2.2.13"
+androidDesugarJdkLibs = "1.1.5"
+landscapist = "2.3.2"
 accompanist = "0.32.0"
 androidGradlePlugin = "8.2.2"
 androidxActivity = "1.8.0"
@@ -45,12 +46,13 @@ stream-chat-client = { group = "io.getstream", name = "stream-chat-android-clien
 stream-chat-offline = { group = "io.getstream", name = "stream-chat-android-offline", version.ref = "streamChatSDK" }
 stream-chat-compose = { group = "io.getstream", name = "stream-chat-android-compose", version.ref = "streamChatSDK" }
 stream-video-core = { group = "io.getstream", name = "stream-video-android-core", version.ref = "streamVideoSDK" }
-stream-video-compose = { group = "io.getstream", name = "stream-video-android-compose", version.ref = "streamVideoSDK" }
-stream-video-mock = { group = "io.getstream", name = "stream-video-android-mock", version.ref = "streamVideoSDK" }
+stream-video-compose = { group = "io.getstream", name = "stream-video-android-ui-compose", version.ref = "streamVideoSDK" }
+stream-video-mock = { group = "io.getstream", name = "stream-video-android-previewdata", version.ref = "streamVideoSDK" }
 stream-log = { group = "io.getstream", name = "stream-log-android", version.ref = "streamLog" }
 landscapist-coil = { group = "com.github.skydoves", name = "landscapist-coil", version.ref = "landscapist" }
 landscapist-animation = { group = "com.github.skydoves", name = "landscapist-animation", version.ref = "landscapist" }
 landscapist-placeholder = { group = "com.github.skydoves", name = "landscapist-placeholder", version.ref = "landscapist" }
+android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
 accompanist-pager = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "accompanist" }
 accompanist-indicator = { group = "com.google.accompanist", name = "accompanist-pager-indicators", version.ref = "accompanist" }
 accompanist-flowlayout = { group = "com.google.accompanist", name = "accompanist-flowlayout", version.ref = "accompanist" }

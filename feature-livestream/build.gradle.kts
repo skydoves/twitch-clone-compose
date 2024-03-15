@@ -34,6 +34,9 @@ dependencies {
   implementation(libs.stream.chat.compose)
   implementation(libs.stream.video.compose)
 
+  // accompanist
+  implementation(libs.accompanist.permissions)
+
   // Compose
   implementation(libs.androidx.compose.ui)
   implementation(libs.androidx.compose.ui.tooling)

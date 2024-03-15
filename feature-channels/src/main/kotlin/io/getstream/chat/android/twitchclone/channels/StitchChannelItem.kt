@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.sp
 import com.skydoves.landscapist.animation.crossfade.CrossfadePlugin
 import com.skydoves.landscapist.coil.CoilImage
 import com.skydoves.landscapist.components.rememberImageComponent
+import com.skydoves.landscapist.placeholder.shimmer.Shimmer
 import com.skydoves.landscapist.placeholder.shimmer.ShimmerPlugin
 import io.getstream.chat.android.compose.state.channels.list.ChannelItemState
 import io.getstream.chat.android.compose.ui.theme.ChatTheme
@@ -80,8 +81,10 @@ fun StitchChannelItem(
         component = rememberImageComponent {
           +CrossfadePlugin()
           +ShimmerPlugin(
-            baseColor = shimmerBase,
-            highlightColor = shimmerHighlight
+            Shimmer.Resonate(
+              baseColor = shimmerBase,
+              highlightColor = shimmerHighlight
+            )
           )
         }
       )
