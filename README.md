@@ -47,8 +47,8 @@ Go to the [Releases](https://github.com/skydoves/twitch-clone-compose/releases) 
 </a>
 
 ## 🛥 Stream Chat & Video SDK
-**Twitch Clone Compose** is built with __[Stream Chat SDK for Compose](https://getstream.io/chat/sdk/compose?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Dec2023_Jaewoong_TwitchCompose&utm_term=DevRelOss)__ to implement messaging systems and __[Stream Video SDK for Compose](https://getstream.io/video/docs/android?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Dec2023_Jaewoong_TwitchCompose&utm_term=DevRelOss)__
-If you’re interested in adding powerful In-App Messaging to your app, check out the __[Android Chat Messaging Tutorial](https://getstream.io/tutorials/android-chat?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Dec2023_Jaewoong_TwitchCompose&utm_term=DevRelOss)__!
+**Twitch Clone Compose** is built with __[Stream Chat SDK for Compose](https://getstream.io/chat/sdk/compose?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Dec2023_Jaewoong_TwitchCompose&utm_term=DevRelOss)__ to implement messaging systems and __[Stream Video SDK for Compose](https://getstream.io/video/docs/android?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Dec2023_Jaewoong_TwitchCompose&utm_term=DevRelOss)__.
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Android Chat Messaging Tutorial](https://getstream.io/tutorials/android-chat?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Dec2023_Jaewoong_TwitchCompose&utm_term=DevRelOss)__ or __[Android Video Chat Tutorial](https://getstream.io/video/sdk/android/tutorial/video-calling/?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Dec2023_Jaewoong_TwitchCompose&utm_term=DevRelOss)__.
 
 ### Stream Chat
 
