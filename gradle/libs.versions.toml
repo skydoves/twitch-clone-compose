@@ -1,7 +1,7 @@
 [versions]
 kotlin = "1.9.20"
 kotlinxCoroutines = "1.8.0"
-kotlinxSerializationJson = "1.6.2"
+kotlinxSerializationJson = "1.6.3"
 ksp = "1.9.23-1.0.20"
 streamChatSDK = "6.1.1"
 streamVideoSDK = "0.5.1"
