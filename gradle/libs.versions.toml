@@ -2,7 +2,7 @@
 kotlin = "1.9.20"
 kotlinxCoroutines = "1.8.0"
 kotlinxSerializationJson = "1.6.3"
-ksp = "1.9.23-1.0.20"
+ksp = "2.0.0-1.0.22"
 streamChatSDK = "6.1.1"
 streamVideoSDK = "0.5.1"
 streamLog = "1.1.4"
