@@ -37,7 +37,7 @@ googleSecretPlugin = "2.0.1"
 spotless = "6.7.0"
 turbine = "1.0.0"
 junit = "4.13.2"
-androidx-test-ext-junit = "1.1.5"
+androidx-test-ext-junit = "1.2.1"
 espresso-core = "3.6.1"
 
 [libraries]
