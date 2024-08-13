@@ -29,8 +29,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
-import io.getstream.chat.android.compose.state.channels.list.ChannelItemState
 import io.getstream.chat.android.compose.state.channels.list.ChannelsState
+import io.getstream.chat.android.compose.state.channels.list.ItemState
 import io.getstream.chat.android.compose.ui.components.LoadingFooter
 
 @Composable
@@ -41,10 +41,10 @@ fun GridChannels(
   contentPadding: PaddingValues = PaddingValues(6.dp),
   helperContent: @Composable BoxScope.() -> Unit = {},
   loadingMoreContent: @Composable () -> Unit = { DefaultChannelsLoadingMoreIndicator() },
-  itemContent: @Composable (ChannelItemState) -> Unit,
+  itemContent: @Composable (ItemState.ChannelItemState) -> Unit,
   divider: @Composable () -> Unit
 ) {
-  val (_, isLoadingMore, _, channelItems) = channelsState
+  val (_, isLoadingMore, endOfChannels, channelItems) = channelsState
 
   Box(modifier = modifier) {
     LazyVerticalGrid(
@@ -57,9 +57,9 @@ fun GridChannels(
     ) {
       items(
         items = channelItems,
-        key = { it.channel.cid }
+        key = { it.key }
       ) { item ->
-        itemContent(item)
+        itemContent(item as ItemState.ChannelItemState)
 
         divider()
       }

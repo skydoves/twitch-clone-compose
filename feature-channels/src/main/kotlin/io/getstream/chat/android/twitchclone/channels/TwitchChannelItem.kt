@@ -37,7 +37,7 @@ import com.skydoves.landscapist.coil.CoilImage
 import com.skydoves.landscapist.components.rememberImageComponent
 import com.skydoves.landscapist.placeholder.shimmer.Shimmer
 import com.skydoves.landscapist.placeholder.shimmer.ShimmerPlugin
-import io.getstream.chat.android.compose.state.channels.list.ChannelItemState
+import io.getstream.chat.android.compose.state.channels.list.ItemState
 import io.getstream.chat.android.compose.ui.theme.ChatTheme
 import io.getstream.chat.android.twitchclone.designsystem.shimmerBase
 import io.getstream.chat.android.twitchclone.designsystem.shimmerHighlight
@@ -50,8 +50,8 @@ import io.getstream.chat.android.twitchclone.navigation.TwitchScreens
 import io.getstream.chat.android.twitchclone.navigation.currentComposeNavigator
 
 @Composable
-fun StitchChannelItem(
-  channelItemState: ChannelItemState
+fun TwitchChannelItem(
+  channelItemState: ItemState.ChannelItemState
 ) {
   val navigator = currentComposeNavigator
 

@@ -35,6 +35,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.VideoCall
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -118,8 +119,8 @@ fun TwitchChannels(
             .fillMaxSize()
             .background(ChatTheme.colors.appBackground),
           viewModel = channelListViewModel,
-          itemContent = { channelItemState ->
-            StitchChannelItem(channelItemState = channelItemState)
+          channelContent = { channelItemState ->
+            TwitchChannelItem(channelItemState = channelItemState)
           },
           divider = { Spacer(modifier = Modifier.height(6.dp)) }
         )
@@ -130,7 +131,7 @@ fun TwitchChannels(
             .background(ChatTheme.colors.appBackground),
           viewModel = channelListViewModel,
           itemContent = { channelItemState ->
-            StitchChannelItem(channelItemState = channelItemState)
+            TwitchChannelItem(channelItemState = channelItemState)
           },
           divider = { Spacer(modifier = Modifier.height(6.dp)) }
         )

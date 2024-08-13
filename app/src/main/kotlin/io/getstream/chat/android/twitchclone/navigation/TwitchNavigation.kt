@@ -16,6 +16,8 @@
 
 package io.getstream.chat.android.twitchclone.navigation
 
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -28,6 +30,7 @@ import io.getstream.chat.android.compose.viewmodel.messages.MessageComposerViewM
 import io.getstream.chat.android.compose.viewmodel.messages.MessageListViewModel
 import io.getstream.chat.android.compose.viewmodel.messages.MessagesViewModelFactory
 import io.getstream.chat.android.models.Filters
+import io.getstream.chat.android.models.InitializationState
 import io.getstream.chat.android.models.querysort.QuerySortByField
 import io.getstream.chat.android.twitchclone.channels.TwitchChannels
 import io.getstream.chat.android.twitchclone.livestream.LivestreamStreamer
@@ -36,17 +39,22 @@ import io.getstream.chat.android.twitchclone.messages.ui.messages.TwitchMessage
 
 fun NavGraphBuilder.whatsAppHomeNavigation() {
   composable(route = TwitchScreens.Channels.name) {
-    val factory = remember {
-      ChannelViewModelFactory(
-        chatClient = ChatClient.instance(),
-        querySort = QuerySortByField.descByName("last_updated"),
-        filters = Filters.eq("type", "livestream")
-      )
+    val clientInitialisationState
+      by ChatClient.instance().clientState.initializationState.collectAsState()
+
+    if (clientInitialisationState == InitializationState.COMPLETE) {
+      val factory = remember {
+        ChannelViewModelFactory(
+          chatClient = ChatClient.instance(),
+          querySort = QuerySortByField.descByName("last_updated"),
+          filters = Filters.eq("type", "livestream")
+        )
+      }
+
+      val channelListViewModel: ChannelListViewModel = viewModel(factory = factory)
+
+      TwitchChannels(channelListViewModel = channelListViewModel)
     }
-
-    val channelListViewModel: ChannelListViewModel = viewModel(factory = factory)
-
-    TwitchChannels(channelListViewModel = channelListViewModel)
   }
 
   slideComposable(
