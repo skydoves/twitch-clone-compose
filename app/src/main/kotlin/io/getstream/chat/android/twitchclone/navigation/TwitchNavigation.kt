@@ -33,6 +33,7 @@ import io.getstream.chat.android.models.Filters
 import io.getstream.chat.android.models.InitializationState
 import io.getstream.chat.android.models.querysort.QuerySortByField
 import io.getstream.chat.android.twitchclone.channels.TwitchChannels
+import io.getstream.chat.android.twitchclone.designsystem.TwitchLoadingIndicator
 import io.getstream.chat.android.twitchclone.livestream.LivestreamStreamer
 import io.getstream.chat.android.twitchclone.livestream.LivestreamWatcher
 import io.getstream.chat.android.twitchclone.messages.ui.messages.TwitchMessage
@@ -54,6 +55,8 @@ fun NavGraphBuilder.whatsAppHomeNavigation() {
       val channelListViewModel: ChannelListViewModel = viewModel(factory = factory)
 
       TwitchChannels(channelListViewModel = channelListViewModel)
+    } else {
+      TwitchLoadingIndicator()
     }
   }
 

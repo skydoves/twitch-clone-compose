@@ -28,7 +28,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
@@ -49,6 +48,7 @@ import io.getstream.chat.android.compose.ui.channels.list.ChannelList
 import io.getstream.chat.android.compose.ui.theme.ChatTheme
 import io.getstream.chat.android.compose.viewmodel.channels.ChannelListViewModel
 import io.getstream.chat.android.twitchclone.channels.grids.GridChannelList
+import io.getstream.chat.android.twitchclone.designsystem.TwitchLoadingIndicator
 import io.getstream.chat.android.twitchclone.model.createMockChannels
 import io.getstream.chat.android.twitchclone.model.createStreamerChannel
 import io.getstream.chat.android.twitchclone.navigation.TwitchScreens
@@ -104,7 +104,9 @@ fun TwitchChannels(
                   val channel = ChatClient
                     .instance()
                     .createStreamerChannel() ?: return@launch
-                  navigator.navigate(TwitchScreens.LivestreamStreamer.createRoute(channel.cid))
+                  navigator.navigate(
+                    TwitchScreens.LivestreamStreamer.createRoute(channel.cid)
+                  )
                 }
               },
             imageVector = Icons.Default.VideoCall,
@@ -138,12 +140,6 @@ fun TwitchChannels(
       }
     }
   } else {
-    Box(
-      modifier = Modifier
-        .fillMaxSize()
-        .background(ChatTheme.colors.appBackground)
-    ) {
-      CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-    }
+    TwitchLoadingIndicator()
   }
 }

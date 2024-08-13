@@ -22,6 +22,7 @@ import io.getstream.chat.android.twitchclone.BuildConfig
 import io.getstream.log.streamLog
 import io.getstream.video.android.core.StreamVideo
 import io.getstream.video.android.core.StreamVideoBuilder
+import io.getstream.video.android.core.notifications.NotificationConfig
 import io.getstream.video.android.model.User
 
 class StreamVideoInitializer : Initializer<Unit> {
@@ -33,6 +34,8 @@ class StreamVideoInitializer : Initializer<Unit> {
     StreamVideoBuilder(
       context = context,
       apiKey = BuildConfig.STREAM_API_KEY,
+      notificationConfig = NotificationConfig(hideRingingNotificationInForeground = true),
+      runForegroundServiceForCalls = false,
       token = StreamVideo.devToken(userId),
       user = User(
         id = userId,

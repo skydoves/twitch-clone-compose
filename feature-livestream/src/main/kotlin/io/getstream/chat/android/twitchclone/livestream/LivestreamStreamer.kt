@@ -59,7 +59,6 @@ import io.getstream.chat.android.twitchclone.messages.ui.messages.TwitchMessage
 import io.getstream.chat.android.twitchclone.model.streamerAvatarLink
 import io.getstream.chat.android.twitchclone.model.streamerName
 import io.getstream.video.android.compose.permission.LaunchCallPermissions
-import io.getstream.video.android.compose.theme.VideoTheme
 import io.getstream.video.android.compose.ui.components.livestream.LivestreamPlayerOverlay
 import io.getstream.video.android.compose.ui.components.video.VideoRenderer
 import io.getstream.video.android.core.Call
@@ -170,10 +169,10 @@ private fun StreamRenderer(
 
   Scaffold(
     modifier = modifier
-      .background(VideoTheme.colors.appBackground)
+      .background(ChatTheme.colors.appBackground)
       .padding(6.dp),
-    contentColor = VideoTheme.colors.appBackground,
-    backgroundColor = VideoTheme.colors.appBackground,
+    contentColor = ChatTheme.colors.appBackground,
+    backgroundColor = ChatTheme.colors.appBackground,
     topBar = {
       Box(modifier = Modifier.fillMaxWidth()) {
         StreamerInformation(
@@ -231,7 +230,7 @@ private fun StreamRenderer(
             } else {
               stringResource(id = R.string.livestream_go_backstage)
             },
-            color = Color.White
+            color = ChatTheme.colors.textHighEmphasis
           )
         }
       }
