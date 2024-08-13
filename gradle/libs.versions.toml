@@ -7,14 +7,12 @@ streamChatSDK = "6.4.4"
 streamVideoSDK = "1.0.12"
 streamLog = "1.1.4"
 jvmTarget = "17"
-androidDesugarJdkLibs = "2.0.4"
 landscapist = "2.3.6"
 accompanist = "0.32.0"
 androidGradlePlugin = "8.5.2"
 androidxActivity = "1.9.0"
 androidxAppCompat = "1.7.0"
 androidxCompose = "1.6.8"
-androidxComposeCompiler = "1.5.4"
 androidxComposeConstraintLayout = "1.0.1"
 androidxComposeNavigation = "2.7.7"
 androidxCore = "1.13.1"
@@ -52,7 +50,6 @@ stream-log = { group = "io.getstream", name = "stream-log-android", version.ref 
 landscapist-coil = { group = "com.github.skydoves", name = "landscapist-coil", version.ref = "landscapist" }
 landscapist-animation = { group = "com.github.skydoves", name = "landscapist-animation", version.ref = "landscapist" }
 landscapist-placeholder = { group = "com.github.skydoves", name = "landscapist-placeholder", version.ref = "landscapist" }
-android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
 accompanist-pager = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "accompanist" }
 accompanist-indicator = { group = "com.google.accompanist", name = "accompanist-pager-indicators", version.ref = "accompanist" }
 accompanist-flowlayout = { group = "com.google.accompanist", name = "accompanist-flowlayout", version.ref = "accompanist" }
