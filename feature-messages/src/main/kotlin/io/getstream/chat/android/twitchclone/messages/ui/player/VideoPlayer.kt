@@ -46,7 +46,7 @@ fun BoxScope.VideoPlayer(videoUrl: String?) {
       setOnPreparedListener { prepared = true }
       layoutParams = FrameLayout.LayoutParams(
         ViewGroup.LayoutParams.MATCH_PARENT,
-        ViewGroup.LayoutParams.WRAP_CONTENT
+        ViewGroup.LayoutParams.MATCH_PARENT
       ).apply {
         gravity = Gravity.CENTER
       }

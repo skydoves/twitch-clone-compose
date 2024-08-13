@@ -35,8 +35,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import io.getstream.chat.android.client.ChatClient
 import io.getstream.chat.android.compose.R
-import io.getstream.chat.android.compose.state.channels.list.ChannelItemState
 import io.getstream.chat.android.compose.state.channels.list.ChannelsState
+import io.getstream.chat.android.compose.state.channels.list.ItemState
 import io.getstream.chat.android.compose.ui.channels.list.ChannelItem
 import io.getstream.chat.android.compose.ui.components.EmptyContent
 import io.getstream.chat.android.compose.ui.components.LoadingIndicator
@@ -72,7 +72,7 @@ fun GridChannelList(
   },
   helperContent: @Composable BoxScope.() -> Unit = {},
   loadingMoreContent: @Composable () -> Unit = { DefaultChannelsLoadingMoreIndicator() },
-  itemContent: @Composable (ChannelItemState) -> Unit = { channelItem ->
+  itemContent: @Composable (ItemState.ChannelItemState) -> Unit = { channelItem ->
     val user by viewModel.user.collectAsState()
 
     DefaultChannelItem(
@@ -123,7 +123,7 @@ private fun ChannelList(
   },
   helperContent: @Composable BoxScope.() -> Unit = {},
   loadingMoreContent: @Composable () -> Unit = { DefaultChannelsLoadingMoreIndicator() },
-  itemContent: @Composable (ChannelItemState) -> Unit = { channelItem ->
+  itemContent: @Composable (ItemState.ChannelItemState) -> Unit = { channelItem ->
     DefaultChannelItem(
       channelItem = channelItem,
       currentUser = currentUser,
@@ -148,7 +148,7 @@ private fun ChannelList(
       divider = divider
     )
 
-    searchQuery.isNotEmpty() -> emptySearchContent(searchQuery)
+    searchQuery.query.isNotBlank() -> emptySearchContent(searchQuery.query)
     else -> emptyContent()
   }
 }
@@ -163,7 +163,7 @@ private fun ChannelList(
  */
 @Composable
 internal fun DefaultChannelItem(
-  channelItem: ChannelItemState,
+  channelItem: ItemState.ChannelItemState,
   currentUser: User?,
   onChannelClick: (Channel) -> Unit,
   onChannelLongClick: (Channel) -> Unit
