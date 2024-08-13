@@ -28,7 +28,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
@@ -75,13 +74,13 @@ fun TwitchChannels(
   if (!isLoading && channels.isNotEmpty()) {
     Column(
       modifier = Modifier
-          .fillMaxSize()
-          .background(ChatTheme.colors.appBackground)
+        .fillMaxSize()
+        .background(ChatTheme.colors.appBackground)
     ) {
       Box(
         modifier = Modifier
-            .padding(12.dp)
-            .fillMaxWidth()
+          .padding(12.dp)
+          .fillMaxWidth()
       ) {
         Text(
           text = "Live Channels",
@@ -93,21 +92,23 @@ fun TwitchChannels(
 
         Box(
           modifier = Modifier
-              .size(32.dp)
-              .align(Alignment.CenterEnd)
-              .background(color = ChatTheme.colors.primaryAccent, shape = CircleShape)
+            .size(32.dp)
+            .align(Alignment.CenterEnd)
+            .background(color = ChatTheme.colors.primaryAccent, shape = CircleShape)
         ) {
           Icon(
             modifier = Modifier
-                .align(Alignment.Center)
-                .clickable {
-                    scope.launch {
-                        val channel = ChatClient
-                            .instance()
-                            .createStreamerChannel() ?: return@launch
-                        navigator.navigate(TwitchScreens.LivestreamStreamer.createRoute(channel.cid))
-                    }
-                },
+              .align(Alignment.Center)
+              .clickable {
+                scope.launch {
+                  val channel = ChatClient
+                    .instance()
+                    .createStreamerChannel() ?: return@launch
+                  navigator.navigate(
+                    TwitchScreens.LivestreamStreamer.createRoute(channel.cid)
+                  )
+                }
+              },
             imageVector = Icons.Default.VideoCall,
             tint = Color.White,
             contentDescription = null
@@ -117,8 +118,8 @@ fun TwitchChannels(
       if (orientation == Configuration.ORIENTATION_PORTRAIT) {
         ChannelList(
           modifier = Modifier
-              .fillMaxSize()
-              .background(ChatTheme.colors.appBackground),
+            .fillMaxSize()
+            .background(ChatTheme.colors.appBackground),
           viewModel = channelListViewModel,
           channelContent = { channelItemState ->
             TwitchChannelItem(channelItemState = channelItemState)
@@ -128,8 +129,8 @@ fun TwitchChannels(
       } else {
         GridChannelList(
           modifier = Modifier
-              .fillMaxSize()
-              .background(ChatTheme.colors.appBackground),
+            .fillMaxSize()
+            .background(ChatTheme.colors.appBackground),
           viewModel = channelListViewModel,
           itemContent = { channelItemState ->
             TwitchChannelItem(channelItemState = channelItemState)
