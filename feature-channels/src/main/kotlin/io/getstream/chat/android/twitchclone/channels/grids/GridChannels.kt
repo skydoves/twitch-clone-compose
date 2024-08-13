@@ -44,7 +44,7 @@ fun GridChannels(
   itemContent: @Composable (ItemState.ChannelItemState) -> Unit,
   divider: @Composable () -> Unit
 ) {
-  val (_, isLoadingMore, endOfChannels, channelItems) = channelsState
+  val (_, isLoadingMore, _, channelItems) = channelsState
 
   Box(modifier = modifier) {
     LazyVerticalGrid(

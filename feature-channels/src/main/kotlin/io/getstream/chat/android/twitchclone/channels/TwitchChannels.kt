@@ -49,6 +49,7 @@ import io.getstream.chat.android.compose.ui.channels.list.ChannelList
 import io.getstream.chat.android.compose.ui.theme.ChatTheme
 import io.getstream.chat.android.compose.viewmodel.channels.ChannelListViewModel
 import io.getstream.chat.android.twitchclone.channels.grids.GridChannelList
+import io.getstream.chat.android.twitchclone.designsystem.TwitchLoadingIndicator
 import io.getstream.chat.android.twitchclone.model.createMockChannels
 import io.getstream.chat.android.twitchclone.model.createStreamerChannel
 import io.getstream.chat.android.twitchclone.navigation.TwitchScreens
@@ -74,13 +75,13 @@ fun TwitchChannels(
   if (!isLoading && channels.isNotEmpty()) {
     Column(
       modifier = Modifier
-        .fillMaxSize()
-        .background(ChatTheme.colors.appBackground)
+          .fillMaxSize()
+          .background(ChatTheme.colors.appBackground)
     ) {
       Box(
         modifier = Modifier
-          .padding(12.dp)
-          .fillMaxWidth()
+            .padding(12.dp)
+            .fillMaxWidth()
       ) {
         Text(
           text = "Live Channels",
@@ -92,21 +93,21 @@ fun TwitchChannels(
 
         Box(
           modifier = Modifier
-            .size(32.dp)
-            .align(Alignment.CenterEnd)
-            .background(color = ChatTheme.colors.primaryAccent, shape = CircleShape)
+              .size(32.dp)
+              .align(Alignment.CenterEnd)
+              .background(color = ChatTheme.colors.primaryAccent, shape = CircleShape)
         ) {
           Icon(
             modifier = Modifier
-              .align(Alignment.Center)
-              .clickable {
-                scope.launch {
-                  val channel = ChatClient
-                    .instance()
-                    .createStreamerChannel() ?: return@launch
-                  navigator.navigate(TwitchScreens.LivestreamStreamer.createRoute(channel.cid))
-                }
-              },
+                .align(Alignment.Center)
+                .clickable {
+                    scope.launch {
+                        val channel = ChatClient
+                            .instance()
+                            .createStreamerChannel() ?: return@launch
+                        navigator.navigate(TwitchScreens.LivestreamStreamer.createRoute(channel.cid))
+                    }
+                },
             imageVector = Icons.Default.VideoCall,
             tint = Color.White,
             contentDescription = null
@@ -116,8 +117,8 @@ fun TwitchChannels(
       if (orientation == Configuration.ORIENTATION_PORTRAIT) {
         ChannelList(
           modifier = Modifier
-            .fillMaxSize()
-            .background(ChatTheme.colors.appBackground),
+              .fillMaxSize()
+              .background(ChatTheme.colors.appBackground),
           viewModel = channelListViewModel,
           channelContent = { channelItemState ->
             TwitchChannelItem(channelItemState = channelItemState)
@@ -127,8 +128,8 @@ fun TwitchChannels(
       } else {
         GridChannelList(
           modifier = Modifier
-            .fillMaxSize()
-            .background(ChatTheme.colors.appBackground),
+              .fillMaxSize()
+              .background(ChatTheme.colors.appBackground),
           viewModel = channelListViewModel,
           itemContent = { channelItemState ->
             TwitchChannelItem(channelItemState = channelItemState)
@@ -138,12 +139,6 @@ fun TwitchChannels(
       }
     }
   } else {
-    Box(
-      modifier = Modifier
-        .fillMaxSize()
-        .background(ChatTheme.colors.appBackground)
-    ) {
-      CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-    }
+    TwitchLoadingIndicator()
   }
 }
