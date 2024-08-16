@@ -25,7 +25,7 @@ public val LocalComposeNavigator: ProvidableCompositionLocal<AppComposeNavigator
   compositionLocalOf {
     error(
       "No AppComposeNavigator provided! " +
-        "Make sure to wrap all usages of Vlip components in TwitchTheme."
+        "Make sure to wrap all usages of UI components in TwitchTheme."
     )
   }
 

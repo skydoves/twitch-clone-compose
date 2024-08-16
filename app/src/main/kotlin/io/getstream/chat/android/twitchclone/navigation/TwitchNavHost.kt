@@ -28,6 +28,6 @@ fun TwitchNavHost(
     navController = navHostController,
     startDestination = TwitchScreens.Channels.route
   ) {
-    whatsAppHomeNavigation()
+    twitchAppHomeNavigation()
   }
 }

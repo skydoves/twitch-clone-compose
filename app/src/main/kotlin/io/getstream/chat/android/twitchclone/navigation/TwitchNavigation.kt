@@ -38,7 +38,7 @@ import io.getstream.chat.android.twitchclone.livestream.LivestreamStreamer
 import io.getstream.chat.android.twitchclone.livestream.LivestreamWatcher
 import io.getstream.chat.android.twitchclone.messages.ui.messages.TwitchMessage
 
-fun NavGraphBuilder.whatsAppHomeNavigation() {
+fun NavGraphBuilder.twitchAppHomeNavigation() {
   composable(route = TwitchScreens.Channels.name) {
     val clientInitialisationState
       by ChatClient.instance().clientState.initializationState.collectAsState()

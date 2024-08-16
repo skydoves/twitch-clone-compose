@@ -33,7 +33,7 @@ internal object DatabaseModule {
 
   @Provides
   @Singleton
-  fun provideWhatsAppCloneDatabase(
+  fun provideTwitchCloneDatabase(
     @ApplicationContext context: Context
   ): TwitchDatabase = Room.databaseBuilder(
     context,
@@ -43,9 +43,9 @@ internal object DatabaseModule {
 
   @Provides
   @Singleton
-  fun provideWhatsAppUserDao(
-    whatsAppCloneDataBase: TwitchDatabase
+  fun provideTwitchUserDao(
+    twitchDatabase: TwitchDatabase
   ): RewardDao {
-    return whatsAppCloneDataBase.rewardDao()
+    return twitchDatabase.rewardDao()
   }
 }

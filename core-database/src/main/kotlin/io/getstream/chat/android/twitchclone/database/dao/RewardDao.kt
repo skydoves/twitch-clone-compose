@@ -29,5 +29,5 @@ interface RewardDao {
   suspend fun getRewards(): List<RewardEntity>
 
   @Insert(onConflict = OnConflictStrategy.REPLACE)
-  suspend fun insertRewards(whatsAppUsers: List<RewardEntity>)
+  suspend fun insertRewards(rewardEntity: List<RewardEntity>)
 }
